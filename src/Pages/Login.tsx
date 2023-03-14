@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import InputField from "../Components/InputField";
 import Button, { EnumTypeBtn } from "../Components/Button";
 import { Link } from "react-router-dom";
+import Footer from "../Layouts/Footer";
 
 const Login = () => {
   const {
@@ -10,10 +11,13 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  // const handleLogin = (data) => {
+  //   onSubmit(data);
+  // };
   return (
     <div className="">
-      <div className="flex flex-col items-center justify-center h-[70vh] text-center bg-gray-200 md: flex-row">
-        <div className="">
+      <div className="flex flex-col items-center justify-center h-[100vh] text-center bg-gray-200 md:flex-row justify-start">
+        <div className="mr-[50px]">
           <p className="text-[50px] font-bold text-blue-600">
             Manager Restaurant
           </p>
@@ -22,26 +26,32 @@ const Login = () => {
           </p>
         </div>
         <div className="login-actions px-[15px] mt-[30px] bg-white rounded-[6px] flex flex-col items-center justify-center ">
-          <form action="" className="w-full px-[10px] rounded-[6px] mt-[15px]">
+          <form
+            action=""
+            className="w-full px-[10px] rounded-[6px] mt-[15px]"
+            // onSubmit={handleSubmit(handleLogin)}
+          >
             <InputField
-              plaholder="Name Login"
+              placeholder="Name Login"
               id="namelogin"
               name="namelogin"
-              register={register}
+              register={{ ...register }}
               error={errors.namelogin}
             />
             <InputField
-              plaholder="Password"
+              placeholder="Password"
               error="Password Invalid"
               className="mt-[15px]"
               id="password"
               name="password"
             />
-            <Button
-              name="Submit"
-              typeBtn={EnumTypeBtn.SUBMIT}
-              className="w-[364px] text-white bg-blue-600 rounded-[15px] px-[12px] py-[16px] mb-[10px] mt-[30px]"
-            />
+            <Link to="/home">
+              <Button
+                name="Submit"
+                typeBtn={EnumTypeBtn.SUBMIT}
+                className="w-[364px] text-white bg-blue-600 rounded-[15px] px-[12px] py-[16px] mb-[10px] mt-[30px]"
+              />
+            </Link>
           </form>
           <Link
             to="/forgotpassword"

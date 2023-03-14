@@ -1,4 +1,5 @@
 import React from "react";
+import { FieldError, FieldErrorsImpl, Merge } from "react-hook-form";
 
 export enum EnumTypeBtn {
   TEXT = "text",
@@ -7,17 +8,21 @@ export enum EnumTypeBtn {
 
 interface Iinput {
   label?: string;
-  plaholder?: string;
+  placeholder?: string;
   className?: string;
   id?: string;
   name?: string;
-  error: string;
-  register?: string;
+  error?:
+    | FieldError
+    | Merge<FieldError, FieldErrorsImpl<any>>
+    | undefined
+    | string;
+  register?: any;
 }
 
 const InputField: React.FC<Iinput> = ({
   label,
-  plaholder,
+  placeholder,
   className,
   id,
   name,
@@ -30,12 +35,12 @@ const InputField: React.FC<Iinput> = ({
       <input
         {...register}
         type="text"
-        placeholder={plaholder}
+        placeholder={placeholder}
         id={id}
         name={name}
         className={`border-solid border-2 outline-0 px-[12px] py-[16px] w-[364px] rounded-[10px] my-[10px] ${className}`}
       />
-      {error && <p className="text-[17px] text-rose-600 text-left">{error}</p>}
+      {error && <p className="text-[17px] text-rose-600 text-left"></p>}
     </div>
   );
 };
