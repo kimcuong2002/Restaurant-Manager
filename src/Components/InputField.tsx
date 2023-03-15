@@ -30,7 +30,7 @@ const InputField: React.FC<Iinput> = ({
   register,
 }) => {
   return (
-    <div className="input-feild-custom h-[100px]">
+    <div className="input-feild-custom">
       <label htmlFor="">{label}</label>
       <input
         {...register}
@@ -38,7 +38,7 @@ const InputField: React.FC<Iinput> = ({
         placeholder={placeholder}
         id={id}
         name={name}
-        className={`border-solid border-2 outline-0 px-[12px] py-[16px] w-[364px] rounded-[10px] my-[10px] ${className}`}
+        className={`border-solid border-2 outline-0 px-[12px] py-[16px] w-[364px] rounded-[10px] ${className}`}
       />
       {error && <p className="text-[17px] text-rose-600 text-left"></p>}
     </div>

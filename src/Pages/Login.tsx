@@ -37,11 +37,12 @@ const Login = () => {
               name="namelogin"
               register={{ ...register }}
               error={errors.namelogin}
+              className="my-[10px]"
             />
             <InputField
               placeholder="Password"
               error="Password Invalid"
-              className="mt-[15px]"
+              className="mt-[10px] "
               id="password"
               name="password"
             />
