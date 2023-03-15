@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import InputField from "../Components/InputField";
 import Button, { EnumTypeBtn } from "../Components/Button";
 import { Link } from "react-router-dom";
-import Footer from "../Layouts/Footer";
 
 const Login = () => {
   const {

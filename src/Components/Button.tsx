@@ -10,7 +10,7 @@ interface IButton {
   icon?: ReactNode;
   name?: string;
   className?: string;
-  typeBtn: EnumTypeBtn;
+  typeBtn?: EnumTypeBtn;
 }
 
 const Button: React.FC<IButton> = ({ icon, name, className, typeBtn }) => {

@@ -1,10 +1,9 @@
-import React from "react";
-import Header from "../Layouts/Header";
+import DefaultLayout from "../Layouts/DefaultLayout";
 
 const Home = () => {
   return (
     <div>
-      <Header />
+      <DefaultLayout />
     </div>
   );
 };
