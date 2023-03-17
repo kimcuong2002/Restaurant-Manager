@@ -1,7 +1,8 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 import InputField from "../Components/InputField";
-import Button, { EnumTypeBtn } from "../Components/Button";
+import Button from "../Components/Button";
+import { EnumTypeBtn } from "../../src/Type";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 const Login = () => {

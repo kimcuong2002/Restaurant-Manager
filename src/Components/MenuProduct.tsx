@@ -1,8 +1,9 @@
 import React from "react";
 import Button from "./Button";
-import { GiNoodles, GiBowlOfRice } from "react-icons/gi";
+import { GiNoodles, GiBowlOfRice, GiCakeSlice } from "react-icons/gi";
 import { TbMilkshake } from "react-icons/tb";
 import { IoMdCafe } from "react-icons/io";
+import { BiFoodMenu } from "react-icons/bi";
 
 const MenuProductData = [
   {
@@ -21,6 +22,22 @@ const MenuProductData = [
     icon: <IoMdCafe />,
     name: "Caffe",
   },
+  {
+    icon: <GiNoodles />,
+    name: "Noodle",
+  },
+  {
+    icon: <TbMilkshake />,
+    name: "Milk Tea",
+  },
+  {
+    icon: <GiCakeSlice />,
+    name: "Rice",
+  },
+  {
+    icon: <BiFoodMenu />,
+    name: "All",
+  },
 ];
 
 const MenuProduct = () => {
@@ -33,7 +50,7 @@ const MenuProduct = () => {
               key={i}
               icon={item.icon}
               name={item.name}
-              className="flex flex-col justify-center items-center px-[25px] py-[15px] border-2 "
+              className="flex flex-col justify-center items-center px-[25px] py-[15px] border-2 mb-[10px] rounded-[8px] shadow-md text-xl"
             />
           );
         })}

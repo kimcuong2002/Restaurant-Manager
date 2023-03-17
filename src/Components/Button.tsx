@@ -1,10 +1,5 @@
-import React, { ButtonHTMLAttributes, ReactNode } from "react";
-
-export enum EnumTypeBtn {
-  BUTTON = "button",
-  SUBMIT = "submit",
-  RESET = "reset",
-}
+import React, { ReactNode } from "react";
+import { EnumTypeBtn } from "../../src/Type";
 
 interface IButton {
   icon?: ReactNode;
