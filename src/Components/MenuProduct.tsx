@@ -50,7 +50,7 @@ const MenuProduct = () => {
               key={i}
               icon={item.icon}
               name={item.name}
-              className="flex flex-col justify-center items-center px-[25px] py-[15px] border-2 mb-[10px] rounded-[8px] shadow-md text-xl"
+              className="flex flex-col justify-center text-black items-center px-[25px] py-[15px] border-2 mb-[10px] rounded-[8px] shadow-md text-xl hover:bg-blue-500 hover:text-white"
             />
           );
         })}

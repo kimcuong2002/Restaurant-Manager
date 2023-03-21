@@ -18,6 +18,7 @@ interface Iinput {
     | undefined
     | string;
   register?: any;
+  onChange?: any;
 }
 
 const InputField: React.FC<Iinput> = ({
@@ -28,12 +29,14 @@ const InputField: React.FC<Iinput> = ({
   name,
   error,
   register,
+  onChange,
 }) => {
   return (
     <div className="input-feild-custom">
       <label htmlFor="">{label}</label>
       <input
         {...register}
+        onChange={onChange}
         type="text"
         placeholder={placeholder}
         id={id}

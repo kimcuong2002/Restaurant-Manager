@@ -6,8 +6,10 @@ import { RiBillLine } from "react-icons/ri";
 import { BiMapPin, BiDotsHorizontalRounded } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
 import { TbSettings } from "react-icons/tb";
+import react, { useState } from "react";
 
 const Header = () => {
+  const [title, setTitle] = useState();
   return (
     <div className="flex w-full justify-between items-center h-[70px] px-[20px] text-[25px] shadow-md text-slate-500">
       <div className="flex w-[130px] items-center w-[22%]">
@@ -29,7 +31,12 @@ const Header = () => {
         <div className="flex border-2 rounded-[10px] items-center pr-[10px]">
           <InputField
             placeholder="Search for food"
-            className="h-[45px] border-0"
+            className="h-[45px] border-none"
+            onChange={(e: any) => {
+              const value = e.target.value;
+              document.title = value ? value : "Hello cc";
+              setTitle(value);
+            }}
           />
           <Button
             icon={<AiOutlineSearch />}

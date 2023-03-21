@@ -25,14 +25,14 @@ const ProductCart: React.FC<IProductCart> = ({
         <p className="flex gap-[10px]">
           {name} {size && <p>({size})</p>}
         </p>
-        <p>+ {note}</p>
+        <p className="break-all">+ {note}</p>
       </div>
-      <div className="">
+      <div className="w-[20%]">
         <p>{price} $</p>
         <div className="flex justify-between items-center">
-          <IoMdRemoveCircleOutline />
+          <IoMdRemoveCircleOutline className="cursor-pointer" />
           <p>{total}</p>
-          <IoMdAddCircleOutline />
+          <IoMdAddCircleOutline className="cursor-pointer" />
         </div>
       </div>
     </div>

@@ -2,20 +2,53 @@ import React from "react";
 import Button from "./Button";
 import ProductCart, { IProductCart } from "./ProductCart";
 import { EnumSizeProduct, EnumCreaseUpDown } from "../../src/Type";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { AiOutlinePayCircle, AiOutlinePrinter } from "react-icons/ai";
+import { CiDiscount1 } from "react-icons/ci";
+import { MdOutlineKeyboardArrowRight, MdOutlineDiscount } from "react-icons/md";
+import {
+  AiOutlinePayCircle,
+  AiOutlinePrinter,
+  AiOutlineTags,
+} from "react-icons/ai";
 
 const dataprooduct: IProductCart[] = [
   {
     name: "Caffe",
-    note: "hellokfaskhfajsfhgahjksgfkjabfijasbkjafsbkjasbkj",
+    note: "hello cc",
     size: EnumSizeProduct.M,
     price: 4,
     total: 10,
   },
   {
     name: "Caffe",
-    note: "hellokfaskhfajsfhgahjksgfkjabfijasbkjafsbkjasbkj",
+    note: "hello",
+    size: EnumSizeProduct.M,
+    price: 4,
+    total: 10,
+  },
+  {
+    name: "Caffe",
+    note: "hello",
+    size: EnumSizeProduct.M,
+    price: 4,
+    total: 10,
+  },
+  {
+    name: "Caffe",
+    note: "hello",
+    size: EnumSizeProduct.M,
+    price: 4,
+    total: 10,
+  },
+  {
+    name: "Caffe",
+    note: "hello",
+    size: EnumSizeProduct.M,
+    price: 4,
+    total: 10,
+  },
+  {
+    name: "Caffe",
+    note: "hello",
     size: EnumSizeProduct.M,
     price: 4,
     total: 10,
@@ -31,22 +64,22 @@ const purchaseButton = [
     stateUpDown: EnumCreaseUpDown.UP,
   },
   {
-    icon: <AiOutlinePayCircle />,
-    title: "Total Price",
+    icon: <MdOutlineDiscount />,
+    title: "sale",
     total: 1,
     totalCost: 450,
     stateUpDown: EnumCreaseUpDown.UP,
   },
   {
-    icon: <AiOutlinePayCircle />,
-    title: "Total Price",
+    icon: <AiOutlineTags />,
+    title: "Fee tax",
     total: 1,
     totalCost: 450,
     stateUpDown: EnumCreaseUpDown.DOWN,
   },
   {
-    icon: <AiOutlinePayCircle />,
-    title: "Total Price",
+    icon: <CiDiscount1 />,
+    title: "Discount",
     totalCost: 450,
     stateUpDown: EnumCreaseUpDown.DOWN,
   },
@@ -54,14 +87,14 @@ const purchaseButton = [
 
 const Cart = () => {
   return (
-    <div className="border-2 rounded-[10px] shadow-md w-[450px] p-[10px] relative">
+    <div className="border-2 rounded-[10px] shadow-md w-[450px] p-[10px] relative h-[75vh]">
       <Button
         name="Choose bill"
         icon={<MdOutlineKeyboardArrowRight />}
         className="flex items-center text-[25px] text-blue-700"
       />
       <hr className="border-2 mb-[20px]" />
-      <div>
+      <div className="overflow-y-auto h-[350px] shadow-md">
         {dataprooduct &&
           dataprooduct.map((item, i) => (
             <ProductCart
