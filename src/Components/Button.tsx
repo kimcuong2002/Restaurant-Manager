@@ -6,6 +6,7 @@ interface IButton {
   name?: string;
   className?: string;
   typeBtn?: EnumTypeBtn;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Button: React.FC<IButton> = ({ icon, name, className, typeBtn }) => {
