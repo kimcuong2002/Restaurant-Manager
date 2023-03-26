@@ -87,7 +87,7 @@ const purchaseButton = [
 
 const Cart = () => {
   return (
-    <div className="border-2 rounded-[10px] shadow-md w-[450px] p-[10px] relative h-[75vh]">
+    <div className="border-2 rounded-[10px] shadow-md w-[450px] p-[10px] relative h-[78vh]">
       <Button
         name="Choose bill"
         icon={<MdOutlineKeyboardArrowRight />}

@@ -11,16 +11,13 @@ import react, { useState } from "react";
 
 const Header = () => {
   const [title, setTitle] = useState();
-  const [navbar, setNavbar] = useState(false);
-
+  const [isModalOpen, setModalState] = useState(false);
+  const toggleModal = () => setModalState(!isModalOpen);
   return (
     <div className="relative">
       <div className="flex w-full justify-between items-center h-[70px] px-[20px] text-[25px] shadow-md text-slate-500">
         <div className="flex w-[130px] items-center w-[22%]">
-          <CgMenuRound
-            onClick={() => setNavbar(!false)}
-            className="cursor-pointer"
-          />
+          <CgMenuRound className="cursor-pointer" onClick={toggleModal} />
           <Button
             icon={<RiBillLine />}
             name="Bill"
@@ -63,7 +60,11 @@ const Header = () => {
           typeBtn={EnumTypeBtn.BUTTON}
         />
       </div>
-      <Modal className="absolute top-100 bg-white mt-[15px]" open={setNavbar} />
+      <Modal
+        className="absolute top-100 bg-white mt-[15px]"
+        isOpen={isModalOpen}
+        onClose={toggleModal}
+      />
     </div>
   );
 };

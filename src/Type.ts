@@ -14,3 +14,8 @@ export enum EnumCreaseUpDown {
   UP = "+",
   DOWN = "-",
 }
+
+export enum EnumTypeInput {
+  TEXT = "text",
+  PASSWORD = "password",
+}

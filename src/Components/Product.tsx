@@ -1,15 +1,5 @@
 import React, { ReactNode } from "react";
-
-export type iProduct = {
-  quantity?: number;
-  totalPrice?: number;
-  id: string | number;
-  image: string;
-  name: string;
-  price: number;
-  className?: string;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-};
+import { iProduct } from "../models/product.type";
 
 const Product: React.FC<iProduct> = ({
   id,

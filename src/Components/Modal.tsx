@@ -5,16 +5,20 @@ import { menuButton } from "../util";
 
 interface iModal {
   className?: string;
-  open: boolean;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const Modal: React.FC<iModal> = ({ className }, open) => {
+const Modal: React.FC<iModal> = ({ className, isOpen, onClose }) => {
+  if (!isOpen) return null;
   return (
     <div
-      className={` w-[250px] rounded-r-[20px] shadow-md ${className}`}
-      onClick={() => open(!true)}
+      className={` w-[270px] border-2 rounded-r-[20px] shadow-md ${className}`}
     >
-      <div className="flex w-[250px] justify-end items-center text-blue-700 text-[25px] border-2 py-[8px] rounded-r-[20px] pr-[20px]  mb-[15px]">
+      <div
+        className="flex w-[250px] cursor-pointer justify-end items-center text-blue-700 text-[25px] border-2 py-[8px] rounded-r-[20px] pr-[20px]  mb-[15px]"
+        onClick={onClose}
+      >
         Back
         <MdKeyboardArrowLeft />
       </div>

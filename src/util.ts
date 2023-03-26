@@ -104,6 +104,18 @@ export const menuButton = [
     name: "Setting",
   },
   {
+    name: "About me",
+  },
+  {
+    name: "Contact",
+  },
+  {
+    name: "Setting",
+  },
+  {
+    name: "Setting",
+  },
+  {
     name: "Setting",
   },
   {
